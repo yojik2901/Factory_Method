@@ -10,17 +10,15 @@ namespace Factory_Method
     {
         static void Main(string[] args)
         {
-            CarSelector carSelector = new CarSelector();
-
-            Car car = carSelector.GetCar(RoadType.CITY);
+            Car car = CarSelector.getInstance().GetCar(RoadType.CITY);
             car.Drive();
             car.Stop();
 
-            Car car1 = carSelector.GetCar(RoadType.GAZON);
+            Car car1 = CarSelector.getInstance().GetCar(RoadType.GAZON);
             car.Drive();
             car.Stop();
 
-            Car car2 = carSelector.GetCar(RoadType.OFF_ROAD);
+            Car car2 = CarSelector.getInstance().GetCar(RoadType.OFF_ROAD);
             car2.Drive();
             car2.Stop();
         }
